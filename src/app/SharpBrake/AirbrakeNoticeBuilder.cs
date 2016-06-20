@@ -172,7 +172,7 @@ namespace SharpBrake
             if ((notice.Error != null) && (notice.Error.Backtrace != null) && notice.Error.Backtrace.Any())
             {
                 // TODO: We should perhaps check whether the topmost back trace is in fact a Controller+Action by performing some sort of heuristic (searching for "Controller" etc.). @asbjornu
-                var backtrace = notice.Error.Backtrace.First();
+                var backtrace = notice.Error.Backtrace.Last();
                 action = backtrace.Method;
                 component = backtrace.File;
             }
