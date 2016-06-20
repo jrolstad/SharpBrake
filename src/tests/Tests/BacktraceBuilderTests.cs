@@ -39,7 +39,7 @@ namespace SharpBrake.Tests
 
             // Assert
             Assert.That(response.Trace, Has.Count.EqualTo(5));
-            Assert.That(response.Trace[0].Method, Is.EqualTo("GetException"));
+            Assert.That(response.Trace[0].Method, Is.EqualTo("GetDeepException"));
         }
 
         [Test]
